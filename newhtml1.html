@@ -14,7 +14,7 @@
             font-family: 'roboto',sans-serif;
         }
         nav{
-            height: 80px;
+            height: 50px;
            background: rgb(97, 2, 97);
 
         }
@@ -135,6 +135,77 @@
 
 
     }
+    /*other styles*/
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .welcome{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+    }
+    .welcome-cls{
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            
+    }
+
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px;
+
+
+
+
+
+   
+}
+
+.search-bar input {
+    
+    border: none;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    outline: none;
+    font-size: 1rem;
+    width: 350px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.search-bar button svg {
+    fill: white;
+}
+::placeholder{
+    color: white;
+    opacity: .75;
+}
+
 
 
     </style>
@@ -142,8 +213,7 @@
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-
+<body background="background/e7eee2fe0ab27fe1c0d13d9315753e22 (1).jpg">
       <!--navigation starts here-->
       <nav>
         <div class="container navbar">
@@ -165,6 +235,27 @@
 
         </div>
     </nav>
+
+    <header>
+        <div class="welcome-cls">
+            <img class="welcome" src="html-files/images/welcome png phone.png" alt="">
+        </div>
+        
+    </header>
+
+<center>
+    <div class="search-bar">
+        <input type="text" placeholder="Search the event here">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M10 2C14.4183 2 18 5.58172 18 10C18 11.8714 17.3714 13.5786 16.3431 14.9051L20.7071 19.2929L19.2929 20.7071L14.9051 16.3431C13.5786 17.3714 11.8714 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4Z"/>
+            </svg>
+        </button>
+    </div>
+
+</center>
+  
+    
     
 </body>
 </html>

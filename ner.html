@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background: #000; /* Background similar to the uploaded image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    width: 300px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.search-bar button svg {
+    fill: white;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search the event here">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M10 2C14.4183 2 18 5.58172 18 10C18 11.8714 17.3714 13.5786 16.3431 14.9051L20.7071 19.2929L19.2929 20.7071L14.9051 16.3431C13.5786 17.3714 11.8714 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4Z"/>
+            </svg>
+        </button>
+    </div>
+    
+</body>
+</html>
