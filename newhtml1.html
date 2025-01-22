@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'roboto',sans-serif;
+        }
+        nav{
+            height: 80px;
+           background: rgb(97, 2, 97);
+
+        }
+        nav .container{
+            margin: 0 auto;
+            max-width: 1100px;
+
+        }
+        nav .navbar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+
+            
+            justify-content: space-between;
+            padding: 0 20px 50px;
+            height: 100%;
+            
+        }
+        nav .logo{
+           margin-top: 39px;
+        }
+        nav .menu{
+            margin-top: 39px;
+        }
+
+        nav .logo a{
+            font-size: 32px;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+
+        }
+         nav .menu ul {
+            display: flex;
+            
+        }
+        nav .menu ul li{
+            list-style: none;
+            margin: 0 15px;
+
+        }
+        nav .menu ul li a{
+            text-decoration: none;
+            font-size: 17px;
+            color: #fff;
+            font-weight: 400;
+            transition: all 400ms;
+            letter-spacing: 1px;
+
+        }
+        nav .menu ul li a:hover{
+            padding: 10px;
+            background: #fff;
+            color: #000;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-weight: 500;
+
+        }
+
+        label i{
+            color: #fff;
+            font-size: 25px;
+
+        }
+
+        #checking{
+            display: none;
+        }
+        label{
+            display: none;
+        }
+        /*making navbar responsive*/
+        @media(max-width: 830px){
+            nav .menu ul{
+                position: fixed;
+                top: 80px;
+                right:-100%;
+                background: #333;
+                opacity: 0.75;
+                border-bottom-left-radius: 12px;
+               
+                height: 150px;
+                width: 45%;
+                display: block;
+                text-align: center;
+                transition: all 400ms;
+        }
+        nav .menu ul li{
+            margin:30px 0;
+        }
+        nav .menu ul li a{
+            font-size: 20px;
+        }
+        nav .menu ul li a:hover{
+            padding: unset;
+            background-color: unset;
+            color: cyan;
+            border: unset;
+            outline: unset;
+            border-radius: unset;      
+        }
+
+        label{
+            display: block;
+        }
+
+        #checking:checked ~ ul{
+            right:0%;
+            
+        }
+        #checking:checked ~ label i::before{
+            content:'\f00d';
+        }
+
+
+    }
+
+
+    </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+      <!--navigation starts here-->
+      <nav>
+        <div class="container navbar">
+           <div class="logo"><a href=""></a></div>
+            
+           
+            
+            <div class="menu">
+                <input type="checkbox" id="checking">
+                <label for="checking">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul>
+                    <li><a href="#">HOME </a></li>
+                    <li><a href="#">HOME </a></li>
+                  
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    
+</body>
+</html>
