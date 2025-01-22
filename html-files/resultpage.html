@@ -8,26 +8,91 @@
 </head>
 <style>
     body {
-        font-family: Arial, sans-serif;
+
         margin: 0;
         padding: 0;
         background-size: cover;
-        /* Ensures the image covers the entire background */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+
+
+
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #6a42f4;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        color: #6a42f4;
+    }
+
+    .subtitle .icon {
+        color: green;
+        font-weight: bold;
+    }
+
+    .button {
+        margin-top: 20px;
+    }
+
+    .button a {
+        text-decoration: none;
+        background-color: #6a42f4;
+        color: white;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 50px;
+        display: inline-block;
+    }
+
+    .button a:hover {
+        background-color: #5438c4;
+    }
+
+    .container {
+        margin-top: 215px;
+    }
+
+    .button {
+        margin-top: 50px;
+    }
+
+    .png {
         display: flex;
-        justify-content: center;
         align-items: center;
+        height: 275px;
+        width: 275px;
 
-
-
-        width: 100%;
-        height: 100%;
-
+        margin-top: 40px;
+        z-index: 0;
 
     }
 </style>
 
-<body background="../background/third page edited.png">
-
+<body background="../background/third page png.png">
+    <div class="container">
+        <div class="title">Daff muttu</div>
+        <div class="subtitle">
+            Result published <span class="icon">✔</span>
+        </div>
+        <div class="button">
+            <a href="#">View Result</a>
+        </div>
+    </div>
+    <center>
+        <div>
+            <img class="png" src="../html-files/images/SA4RGOTHAYAM main .png" alt="">
+        </div>
+    </center>
 </body>
 
 </html>

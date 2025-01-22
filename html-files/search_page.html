@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srch page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            /* Ensures the image covers the entire background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+
+
+        }
+
+        .welcome {
+            display: flex;
+            align-items: center;
+            height: 250px;
+            width: 250px;
+            padding-left: 25px;
+            margin-bottom: 150px;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+            margin-top: -200px;
+        }
+
+        .search-input {
+            border: none;
+            background: none;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            width: 250px;
+            font-family: Arial, sans-serif;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-button {
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .search-button svg {
+            fill: rgba(255, 255, 255, 0.7);
+            transition: fill 0.3s ease;
+        }
+
+        .search-button:hover svg {
+            fill: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 250px;
+            width: 250px;
+            padding-left: 25px;
+            margin-top: -23px;
+            /* Adjusts the position below the search bar */
+            z-index: 0;
+            padding-bottom: 26px;
+        }
+
+        .union {
+            display: flex;
+            align-items: center;
+            height: 250px;
+            width: 250px;
+            padding-left: 25px;
+            margin-bottom: 150px;
+            z-index: 0;
+
+
+        }
+
+        @media (max-width:400px) {
+            .union {
+                padding-top: 100px;
+            }
+
+            .logo {
+                padding-top: 50px;
+            }
+        }
+
+
+
+
+        /*navbar styles */
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'roboto', sans-serif;
+        }
+
+        nav {
+            height: 80px;
+            background: violet;
+
+
+        }
+
+        nav .container {
+            margin: 0 auto;
+            max-width: 1100px;
+
+
+        }
+
+        nav .navbar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+
+
+            justify-content: space-between;
+
+            padding: 0 20px 50px;
+            height: 100%;
+
+        }
+
+        nav .logo {
+            margin-top: 39px;
+        }
+
+        nav .menu {
+            margin-top: 39px;
+        }
+
+        nav .logo a {
+            font-size: 32px;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+
+        }
+
+        nav .menu ul {
+            display: flex;
+
+        }
+
+        nav .menu ul li {
+            list-style: none;
+            margin: 0 15px;
+
+        }
+
+        nav .menu ul li a {
+            text-decoration: none;
+            font-size: 17px;
+            color: #fff;
+            font-weight: 400;
+            transition: all 400ms;
+            letter-spacing: 1px;
+
+        }
+
+        nav .menu ul li a:hover {
+            padding: 10px;
+            background: #fff;
+            color: #000;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-weight: 500;
+
+        }
+
+        label i {
+            color: #fff;
+            font-size: 25px;
+
+        }
+
+        #checking {
+            display: none;
+        }
+
+        label {
+            display: none;
+        }
+
+        /*making navbar responsive*/
+        @media(max-width: 830px) {
+            nav .menu ul {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                background: #333;
+                height: 150px;
+                width: 45%;
+                display: block;
+                text-align: center;
+                transition: all 400ms;
+            }
+
+            nav .menu ul li {
+                margin: 30px 0;
+            }
+
+            nav .menu ul li a {
+                font-size: 20px;
+            }
+
+            nav .menu ul li a:hover {
+                padding: unset;
+                background-color: unset;
+                color: cyan;
+                border: unset;
+                outline: unset;
+                border-radius: unset;
+            }
+
+            label {
+                display: block;
+            }
+
+            #checking:checked~ul {
+                right: 0%;
+
+            }
+
+            #checking:checked~label i::before {
+                content: '\f00d';
+            }
+
+
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body background="../background/e7eee2fe0ab27fe1c0d13d9315753e22 (1).jpg">
+    <div>
+        <header>
+            <img class="welcome" src="images/welcome png phone.png" alt="">
+        </header>
+
+
+
+
+
+        <div class="search-container">
+            <input type="text" placeholder="search the event here" class="search-input">
+            <button class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="white"
+                        d="M10 2a8 8 0 0 1 5.7 13.7l5 5a1 1 0 0 1-1.4 1.4l-5-5A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z" />
+                </svg>
+            </button>
+
+
+        </div>
+        <div class="Svargodhayam">
+            <img class="logo" src="images/sargodayam title yellow.png" alt="">
+        </div>
+        <footer>
+            <img class="union" src="images/stud union white.png" alt="">
+        </footer>
+    </div>
+
+
+    </div>
+
+    <!--navigation starts here-->
+    <nav>
+        <div class="container navbar">
+            <div class="logo"><a href=""></a></div>
+
+
+
+            <div class="menu">
+                <input type="checkbox" id="checking">
+                <label for="checking">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul>
+                    <li><a href="#">HOME </a></li>
+                    <li><a href="#">HOME </a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+</body>
+
+</html>
