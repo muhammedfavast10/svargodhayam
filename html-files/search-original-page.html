@@ -218,6 +218,49 @@
 }
 
 
+#itemList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide the list initially */
+    margin-top: 5px;
+}
+
+#itemList li {
+    padding: 10px;
+    border: none ;
+    border-radius: 24px;
+    margin-bottom: 10px;
+
+
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px;
+    color: white;
+    
+    
+    
+}
+
+#itemList li:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#noItemsMessage {
+    color: yellow;
+    font-size: 14px;
+    
+    margin-top: 10px;
+}
+
+
 
 .Svargodhayam{
     display: flex;
@@ -283,13 +326,28 @@ footer{
 
 <center>
     <div class="search-bar">
-        <input type="text" placeholder="Search the event here">
+        <input type="text" id="searchBar" placeholder="Search the event here" onkeyup="filterList()">
         <button>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                 <path d="M10 2C14.4183 2 18 5.58172 18 10C18 11.8714 17.3714 13.5786 16.3431 14.9051L20.7071 19.2929L19.2929 20.7071L14.9051 16.3431C13.5786 17.3714 11.8714 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4Z"/>
             </svg>
         </button>
     </div>
+
+    <div class="search-list">
+        <ul id="itemList">
+            <li>Vattapattu</li>
+            <li>Daff Muttu</li>
+            <li>Kolkali</li>
+            <li>Oppana</li>
+            <li>Aravana Muttu</li>
+            <li>kathaparachil</li>
+            <li>thiruvathira</li>
+        </ul>
+
+        <p id="noItemsMessage" style="display: none;">No items found</p>
+
+        </div>
 
 
 
@@ -307,6 +365,6 @@ footer{
 </center>
   
     
-    
+<script src="../nan1.js"></script>   
 </body>
 </html>
