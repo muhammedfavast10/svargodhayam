@@ -8,7 +8,7 @@
     <style>
         .container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             height: 100vh;
         }
@@ -41,13 +41,13 @@
             margin: 10px 0;
         }
 
-        .leaderboard form input[type="text"] {
+        .leaderboard form input[type="number"] {
             width: 150px;
             padding: 5px;
             text-align: center;
         }
 
-        .leaderboard form input[type="submit"] {
+        .input-submit {
             background-color: #ffd700;
             border: none;
             border-radius: 21px;
@@ -68,6 +68,95 @@
             cursor: pointer;
             font-weight: bold;
         }
+
+
+
+        body{
+            background-color: orange;
+        }
+    .search-bar{
+            display: flex;
+    align-items: center;
+    
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px;
+ 
+        }
+
+
+    .search-bar input {
+    
+    border: none;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    outline: none;
+    font-size: 1rem;
+    width: 350px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.search-bar button svg {
+    fill: white;
+}
+::placeholder{
+    color: white;
+    opacity: .75;
+}
+
+
+
+#itemList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide the list initially */
+    margin-top: 5px;
+}
+
+#itemList li {
+    padding: 10px;
+    border: none ;
+    border-radius: 24px;
+    margin-bottom: 10px;
+
+
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px;
+    color: white;
+    
+    
+    
+}
+
+#itemList li:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#noItemsMessage {
+    color: yellow;
+    font-size: 14px;
+    
+    margin-top: 10px;
+}
     </style>
 </head>
 
@@ -75,31 +164,115 @@
     <div class="container">
         <div class="leaderboard">
             <h1>LEADERBOARD</h1>
-            <form>
+            <form method="POST">
 
                 <div>
-                    <span>chathurmukam</span> <input type="text" name="chathurmukam" value="100" readonly>
+                    <span>chathurmukam</span> <input type="number" name="chathurmukam"  >
                 </div>
                 <div>
-                    <span>devasuram</span> <input type="text" name="devasuram" value="94" readonly>
+                    <span>devasuram</span> <input type="number" name="devasuram"  >
                 </div>
                 <div>
-                    <span>padayottam</span> <input type="text" name="padayottam" value="86" readonly>
+                    <span>padayottam</span> <input type="number" name="padayottam"  >
                 </div>
                 <div>
-                    <span>thayvaram</span> <input type="text" name="thayvaram" value="79" readonly>
+                    <span>thayvaram</span> <input type="number" name="thayvaram"  >
                 </div>
                 <div>
-                    <input type="submit" value="UPDATE">
+                    <button class="input-submit" type="submit">
+                         UPDATE
+                    </button>
+                    
                 </div>
             </form>
         </div>
-        <div class="upload">
-            <p>upload event results here</p>
-            <img src="" alt="upload">
-            <button>UPLOAD</button>
-        </div>
+        
+
+
+
+
     </div>
+<center>
+
+
+    <div class="search-bar">
+        <input type="text" id="searchBar" placeholder="Search the event here" onkeyup="filterList()">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M10 2C14.4183 2 18 5.58172 18 10C18 11.8714 17.3714 13.5786 16.3431 14.9051L20.7071 19.2929L19.2929 20.7071L14.9051 16.3431C13.5786 17.3714 11.8714 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4Z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="search-list">
+        <ul id="itemList">
+            <li id="1">Light Music - Male</li>
+            <li id="2">Light Music - Female</li>
+            <li id="3">Classical Music - Male</li>
+            <li id="4"> Classical Music - Female</li>
+            <li id="5"> Mappilappattu - Male</li>
+            <li id="6">Mappilappattu - Female</li>
+            <li id="7">Western Music</li>
+            <li id="8">Kathakali Music - Male</li>
+            <li id="9">Kathakali Music - Female</li>
+            <li id="10">Semi-Classical Music (Hindustani, Carnatic)</li>
+            <li id="11"> Recitation - Malayalam</li>
+            <li id="12">Recitation - Hindi</li>
+            <li id="13">Recitation - Arabic</li>
+            <li id="14"> Recitation - English</li>
+            <li id="15">Bharatanatyam</li>
+            <li id="16">Mohiniyattam</li>
+            <li id="17">Classical Dance (Kuchipudi, Odissi, Kathak, Manipuri)</li>
+            <li id="18"> Kadhaprasangam</li>
+            <li id="19">Mono Act</li>
+            <li id="20">Mimicry</li>
+            <li id="21">Folk Dance - Male</li>
+            <li id="22">Folk Dance - Female</li>
+            <li id="23">Kathakali - Male</li>
+            <li id="24">Kathakali - Female</li>
+            <li id="25">Thullal</li>
+            <li id="26">Chakyarkoothu - Male</li>
+            <li id="27">Kerala Nadanam</li>
+            <li id="28">Group Song - Indian</li>
+            <li id="29">Group Song - Western</li>
+            <li id="30">Mappilappattu</li>
+            <li id="31">Folk Song</li>
+            <li id="32">Patriotic Song</li>
+            <li id="33">Ganamela</li>
+            <li id="34">Thiruvathira</li>
+            <li id="35">Kolkkali</li>
+            <li id="36">Duffmuttu</li>
+            <li id="37">Oppana - Female</li>
+            <li id="38">Margamkali - Female</li>
+            <li id="39">Vattappattu</li>
+            <li id="40">Drama - English</li>
+            <li id="41">Drama - Malayalam</li>
+            <li id="42">Drama - Hindi</li>
+            <li id="43">Drama - Sanskrit</li>
+            <li id="44">Folk Dance - Male</li>
+            <li id="45">Folk Dance - Female</li>
+            <li id="46">Mime</li>
+            <li id="47">Skit - English</li>
+            <li id="48">Skit - Malayalam</li>
+            <li id="49">Pooramkali - Male</li>
+            <li id="50">Band Melam</li>
+            <li id="51">Chenda Melam</li>
+            <li id="52">Panchavadyam</li>
+            <li id="53">Maddalam</li>
+            <li id="54">Kathakali</li>
+            <li id="55">Koodiyattam</li>
+            <li id="56"> Parichamuttukali - Male</li>
+            <li id="57">Arabana Muttu</li>
+            
+        </ul>
+
+        <p id="noItemsMessage" style="display: none;">No items found</p>
+
+        </div>
+
+    </center>
+
+    <script src="../search-list-backup.js"></script>
 </body>
 
 </html>
