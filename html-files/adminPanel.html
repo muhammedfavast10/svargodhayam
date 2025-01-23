@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .leaderboard,
+        .upload {
+            text-align: center;
+        }
+
+        .leaderboard {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+        }
+
+        .leaderboard h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .leaderboard form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .leaderboard form div {
+            margin: 10px 0;
+        }
+
+        .leaderboard form input[type="text"] {
+            width: 150px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .leaderboard form input[type="submit"] {
+            background-color: #ffd700;
+            border: none;
+            border-radius: 21px;
+            padding: 13px 96px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .upload img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .upload button {
+            background-color: #ffd700;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="leaderboard">
+            <h1>LEADERBOARD</h1>
+            <form>
+
+                <div>
+                    <span>chathurmukam</span> <input type="text" name="chathurmukam" value="100" readonly>
+                </div>
+                <div>
+                    <span>devasuram</span> <input type="text" name="devasuram" value="94" readonly>
+                </div>
+                <div>
+                    <span>padayottam</span> <input type="text" name="padayottam" value="86" readonly>
+                </div>
+                <div>
+                    <span>thayvaram</span> <input type="text" name="thayvaram" value="79" readonly>
+                </div>
+                <div>
+                    <input type="submit" value="UPDATE">
+                </div>
+            </form>
+        </div>
+        <div class="upload">
+            <p>upload event results here</p>
+            <img src="" alt="upload">
+            <button>UPLOAD</button>
+        </div>
+    </div>
+</body>
+
+</html>
