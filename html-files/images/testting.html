@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svargodayam Arts Festival</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        body {
+            background-image: url('../html-files/images/bg of about us 1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #f4f4f4;
+            text-align: left;
+            padding: 10px;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .heading {
+            margin-top: 30px;
+            margin-left: 15px;
+            color: white;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .heading h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 2.5em;
+        }
+
+        .heading h5 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.2em;
+        }
+
+        .para {
+            margin-top: 70px;
+            color: rgba(0, 0, 0, 0.7);
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .dev {
+            color: #f81596;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .devdiv {
+            margin-top: 110px;
+        }
+
+        .profile {
+            margin-top: 30px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f81596;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            font-weight: bold;
+            animation: slideIn 1.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1><b>About Us</b></h1>
+        <h5>Powered by <b>kidilan.bca</b></h5>
+    </div>
+    <div class="para">
+        <p>Welcome to Svargodayam!<br>
+            Svargodayam is our college's premier arts festival, dedicated to celebrating the incredible talent and
+            creativity of our students. This exciting event features a variety of performances and exhibitions,
+            including music, dance, drama, and visual arts.<br><br>
+
+            Join us as we highlight the artistic achievements of our community, fostering a sense of unity and pride.
+            Stay updated with event results and support our talented participants.<br>
+            Thank you for being part of Svargodayam. Let's celebrate the arts together!
+        </p>
+    </div>
+    <center>
+        <div class="devdiv">
+            <span class="dev">Developers</span>
+        </div>
+        <div class="content">
+            <img class="profile" src="../html-files/images/photo_2025-01-23_15-14-44.jpg" alt="Aiman Abdul Rasak">
+            <p>Aiman Abdul Rasak</p>
+            <img class="profile" src="../html-files/images/abeen.jpg" alt="Abeen TP">
+            <p class="names">Abeen TP</p>
+            <img class="profile" src="../html-files/images/favas.jpg" alt="Favas T">
+            <p class="names">Favas T</p>
+            <img class="profile" src="../html-files/images/akhil.jpg" alt="Akhil Nasim">
+            <p class="names">Akhil Nasim</p>
+        </div>
+    </center>
+</body>
+
+</html>
